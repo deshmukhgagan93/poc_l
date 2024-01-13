@@ -2,7 +2,7 @@ from datetime import datetime
 
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from api_test_dag.scripts import fetch
+from scripts.fetch_api_data import main_function
 
 
 DAG = DAG(
@@ -14,6 +14,6 @@ DAG = DAG(
 
 fetch_task = PythonOperator(
     task_id='fetch_task',
-    python_callable=fetch,
+    python_callable=main_function,
     dag=DAG,
 )
