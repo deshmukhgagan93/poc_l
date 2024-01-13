@@ -1,10 +1,6 @@
 from datetime import datetime
 from airflow import DAG
-from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
-from airflow.utils.dates import days_ago
-from airflow.operators.python_operator import PythonOperator
-from airflow.oprators.python_operator import PythonVirtualenvOperator
+from airflow.operators.python import PythonVirtualenvOperator
 from scripts.code import print_venv
 
 dag = DAG(
