@@ -1,7 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonVirtualenvOperator
-from scripts.code import print_venv
+from utils_python_venv.scripts.code import print_venv
 
 dag = DAG(
     dag_id='python_venv_dag',
